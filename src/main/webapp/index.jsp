@@ -15,6 +15,7 @@
     <div class="form-wrapper">
       <form action="#">
         <div class="form-control">
+          <h1>Hello</h1>
           <input type="text" required />
           <label>Email or phone number</label>
         </div>
