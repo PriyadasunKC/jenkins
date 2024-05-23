@@ -11,20 +11,25 @@
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>com.oracle.bedrock</groupId>
 			<artifactId>bedrock-runtime-maven</artifactId>
 			<version>5.1.2</version>
 		</dependency>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
+		<!-- Added SonarQube Maven plugin dependency -->
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.9.1.2184</version>
+		</dependency>
 	</dependencies>
 
 	<distributionManagement>
@@ -32,7 +37,6 @@
 			<id>nexusRepo</id>
 			<url>http://13.233.230.166:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
-
 		<repository>
 			<id>nexusRepo</id>
 			<url>http://13.233.230.166:8081/repository/maven-releases/</url>
@@ -41,11 +45,21 @@
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>maven1</id>
-			<name>Maven.org</name>
-			<url>http://repo1.maven.org/maven2</url>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
 		</pluginRepository>
 	</pluginRepositories>
 
+	<build>
+		<plugins>
+			<!-- Added SonarQube Maven plugin -->
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.9.1.2184</version>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
