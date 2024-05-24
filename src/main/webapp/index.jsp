@@ -15,16 +15,16 @@
     <div class="form-wrapper">
       <form action="#">
         <div class="form-control">
-          <h1>gi</h1>
+          
           <input type="text" required />
-          <h1>Hello worold</h1>
+
           <label>Email or phone number</label>
         </div>
         <div class="form-control">
           <input type="password" required />
           <label>Password</label>
         </div>
-        <button type="submit">WELCOME TO NETFLIX V-6.0</button>
+        <button type="submit">WELCOME TO NETFLIX New Version</button>
         <div class="form-help">
           <div class="remember-me">
             <input type="checkbox" id="remember-me" />
