@@ -17,6 +17,7 @@
         <div class="form-control">
           <h1>gi</h1>
           <input type="text" required />
+          <h1>Hello worold</h1>
           <label>Email or phone number</label>
         </div>
         <div class="form-control">
